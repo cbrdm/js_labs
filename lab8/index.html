@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>React</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    function MyComponent() {
+      return (
+        <div style={{ padding: "20px", background: "#eee", borderRadius: "10px" }}>
+          <h2>Мій React компонент</h2>
+          <p>Текст</p>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <h1>Головний компонент App</h1>
+          <MyComponent /> { }
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+
+  </script>
+</body>
+
+</html>
