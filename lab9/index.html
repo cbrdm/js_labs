@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>React useState</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    function Counter() {
+      const [count, setCount] = React.useState(0);
+
+      return (
+        <div style={{ padding: "20px", border: "1px solid #ccc", borderRadius: "10px" }}>
+          <h2>Компонент Counter</h2>
+          <p>Поточне значення: {count}</p>
+          <button onClick={() => setCount(count + 1)}>
+            Збільшити
+          </button>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <h1>Головний компонент App</h1>
+
+          { }
+          <Counter />
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+
+</html>
